@@ -1,0 +1,42 @@
+<h1>
+    {{ titulo }} <i class="fas fa-video"></i></h1>
+<hr>
+
+<div class="Movies-wrapper mb-5 animated fadeIn">
+    <div class="img-wrapper puntero" [routerLink]="['/pelicula', peliculas[0].id, 'home']">
+        <img class="img-movies" [src]="peliculas[0] | peliculasImagen" alt="">
+        <p class="pic-titulo">
+            {{ peliculas[0].title }}
+        </p>
+    </div>
+    <div class="img-wrapper puntero" [routerLink]="['/pelicula', peliculas[15].id, 'home']">
+        <img class="img-movies" [src]="peliculas[15] | peliculasImagen" alt="">
+        <p class="pic-titulo">
+            {{ peliculas[15].title }}
+        </p>
+    </div>
+    <div class="img-wrapper puntero" [routerLink]="['/pelicula', peliculas[2].id, 'home']">
+        <img class="img-movies" [src]="peliculas[2] | peliculasImagen" alt="">
+        <p class="pic-titulo">
+            {{ peliculas[2].title }}
+        </p>
+    </div>
+    <div class="img-wrapper puntero" [routerLink]="['/pelicula', peliculas[3].id, 'home']">
+        <img class="img-movies" [src]="peliculas[3] | peliculasImagen" alt="">
+        <p class="pic-titulo">
+            {{ peliculas[3].title }}
+        </p>
+    </div>
+    <div class="img-wrapper puntero" [routerLink]="['/pelicula', peliculas[4].id, 'home']">
+        <img class="img-movies" [src]="peliculas[4] | peliculasImagen" alt="">
+        <p class="pic-titulo">
+            {{ peliculas[4].title }}
+        </p>
+    </div>
+    <div class="img-wrapper puntero" [routerLink]="['/pelicula', peliculas[6].id, 'home']">
+        <img class="img-movies" [src]="peliculas[6] | peliculasImagen" alt="">
+        <p class="pic-titulo">
+            {{ peliculas[6].title }}
+        </p>
+    </div>
+</div>

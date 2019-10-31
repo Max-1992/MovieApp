@@ -1,0 +1,20 @@
+<app-nabvar></app-nabvar>
+<div class="container pt-5">
+
+    <h1 class="mb-3">Buscador <i class="fas fa-search"></i></h1>
+    <input class="form-control" [(ngModel)]="buscar" (keyup.enter)="buscarPelicula()" type="text" name="buscar" placeholder="Busca tu pelicular favorita...">
+    <hr>
+
+    <div class="card-columns animated fadeIn">
+        <div class="card" *ngFor="let pelicula of _movie.peliculas">
+            <img [src]="pelicula | peliculasImagen" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">{{ pelicula.title }}</h5>
+                <p class="card-text">{{ pelicula.overview | slice:0:250}}...</p>
+                <button class="btn btn-block btn-outline-primary" [routerLink]="['/pelicula', pelicula.id , 'buscar', buscar]" routerLinkActive="router-link-active">
+                    Ver más...
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

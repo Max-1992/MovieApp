@@ -1,0 +1,15 @@
+<app-nabvar></app-nabvar>
+<div class="jumbotron jumbotron-fluid animated fadeIn" [ngStyle]="{ 'background-color': '#5bc0de'  }">
+    <div class="container">
+        <h1 class="display-3 title">Movies App <i class="fab fa-google-play"></i></h1>
+        <p class="lead">La aplicación de Peliculas más utilizada, con más de 1 millón de Usuarios Registrados.</p>
+    </div>
+</div>
+
+<div class="container mb-4">
+
+    <app-galeria [peliculas]="peliculasPopulares" [titulo]="'Peliculas Populares'"></app-galeria>
+
+    <app-galeria [peliculas]="peliculasChicos" [titulo]="'Peliculas Populares entre los Niños'"></app-galeria>
+
+</div>

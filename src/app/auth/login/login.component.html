@@ -1,0 +1,43 @@
+<div class="body-wrapper ">
+    <div class="login-wrapper animated fadeInRight">
+        <h1 class="title">Login</h1>
+        <form [formGroup]="form" (ngSubmit)="login()" class="form-wrapper">
+            <div class="input-wrapper">
+                <i class="fas fa-user icon"></i>
+                <input class="input" type="email" placeholder="email" formControlName="email">
+
+                <!-- Validaciones de Email -->
+                <div class="Valid animated fadeIn fast" *ngIf="email.touched  && email.invalid">
+                    <p *ngIf="email.touched  && email.errors.required">
+                        El correo es requerido...
+                    </p>
+                    <p *ngIf="email.touched  && email.errors.pattern">
+                        El correo es no es valido...
+                    </p>
+                </div>
+            </div>
+            <div class="input-wrapper">
+                <i class="fas fa-lock icon"></i>
+                <input class="input" type="password" placeholder="password" formControlName="password">
+
+                <!-- Validaciones de Password -->
+                <div class="Valid animated fadeIn fast" *ngIf="password.touched  && password.invalid">
+                    <p *ngIf="password.touched  && password.errors.required">
+                        La contraseña es requerida...
+                    </p>
+                </div>
+            </div>
+
+            <div class="custom-control custom-checkbox mb-5">
+                <input type="checkbox" class="custom-control-input" id="customCheckDisabled" formControlName="remember">
+                <label class="custom-control-label text-white" for="customCheckDisabled">Recordar mi usuario</label>
+            </div>
+            <button class="button">
+                Login
+            </button>
+            <p class="message">
+                ¿No tienes cuenta aún? ¡Haz <a class="link" routerLink="/registro">click aquí</a> para registrarte!
+            </p>
+        </form>
+    </div>
+</div>

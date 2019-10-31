@@ -1,0 +1,15 @@
+.title {
+    font-family: 'Permanent Marker', cursive;
+    color: rgb(255, 253, 253)
+}
+
+i {
+    position: relative;
+    top: 3px;
+    left: 1rem;
+}
+
+.lead {
+    color: white;
+    font-weight: 600;
+}

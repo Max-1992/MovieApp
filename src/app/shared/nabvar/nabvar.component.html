@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white ">
+
+    <a class="navbar-brand text-white">MoviesApp</a>
+
+    <button class="navbar-toggler" style="color: white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon text-white"></span>
+        </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active" routerLinkActive="active">
+                <a class="nav-link text-white" [routerLink]="['/home']">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link text-white" [routerLink]="['/buscar']">Buscar</a>
+            </li>
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link text-white" (click)="logaut()" [routerLink]="['/login']">Salir</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0" (ngSubmit)="buscarPelicula(pelicula.value)">
+            <input #pelicula class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
